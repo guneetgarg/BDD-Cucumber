@@ -1,11 +1,11 @@
-package com.ruks.step;
+package com.jb.steps;
 
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
 import org.junit.Assert;
 
-import com.ruks.core.Calculator;
+import com.jb.Calculator;
 
 public class CalculatorStep {
 	private Calculator myCal;

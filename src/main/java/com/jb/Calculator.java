@@ -1,4 +1,4 @@
-package com.ruks.core;
+package com.jb;
 
 public class Calculator {
 	private int sum;

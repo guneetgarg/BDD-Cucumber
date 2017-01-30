@@ -1,4 +1,4 @@
-package com.ruks.story;
+package com.jb.stories;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import org.jbehave.core.reporters.StoryReporterBuilder;
 import org.jbehave.core.steps.CandidateSteps;
 import org.jbehave.core.steps.InstanceStepsFactory;
 
-import com.ruks.step.CalculatorStep;
+import com.jb.steps.CalculatorStep;
 
 public class CalculatorStory extends JUnitStory {
 	public Configuration configuration() {
