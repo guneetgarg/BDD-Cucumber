@@ -2,7 +2,13 @@
 (com/ruks/story/calculator_story.story)
 Scenario: CAl add testin
 Given a calculator
-When I add 2 and 9
-Then the outcome should 11
+When a add 2 and 9 (PENDING)
+Then the outcome should 12 (NOT PERFORMED)
+@When("a add 2 and 9")
+@Pending
+public void whenAAdd2And9() {
+  // PENDING
+}
+
 
 
