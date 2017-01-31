@@ -26,5 +26,67 @@
 			<artifactId>selenium-java</artifactId>
 			<version>3.0.1</version>
 		</dependency>
+
+
+
+
+
+
+
+
+
+
+
+
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-jvm</artifactId>
+			<version>LATEST</version>
+			<type>pom</type>
+		</dependency>
+
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>LATEST</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge.cobertura</groupId>
+			<artifactId>cobertura</artifactId>
+			<version>LATEST</version>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-jvm-deps</artifactId>
+			<version>LATEST</version>
+		</dependency>
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+			<version>LATEST</version>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>gherkin</artifactId>
+			<version>LATEST</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>2LATEST</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>LATEST</version>
+			<scope>test</scope>
+		</dependency>
+
+
+
+
+
+
 	</dependencies>
 </project>
