@@ -31,7 +31,7 @@ public class Test_Steps {
 	@When("^User enters UserName and Password$")
 	public void user_enters_UserName_and_Password() throws Throwable {
 		driver.findElement(By.id("log")).sendKeys("guneetgarg");
-		driver.findElement(By.id("pwd")).sendKeys("");
+		driver.findElement(By.id("pwd")).sendKeys("123456");
 		driver.findElement(By.id("login")).click();
 	}
 
