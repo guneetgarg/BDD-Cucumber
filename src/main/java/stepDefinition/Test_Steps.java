@@ -28,10 +28,10 @@ public class Test_Steps {
 		driver.findElement(By.xpath(".//*[@id='account']/a")).click();
 	}
 
-	@When("^User enters UserName and Password$")
-	public void user_enters_UserName_and_Password() throws Throwable {
-		driver.findElement(By.id("log")).sendKeys("guneetgarg");
-		driver.findElement(By.id("pwd")).sendKeys("123456");
+	@When("^User enters \"(.*)\" and \"(.*)\"$")
+	public void user_enters_UserName_and_Password(String username, String password) throws Throwable {
+		driver.findElement(By.id("log")).sendKeys(username);
+		driver.findElement(By.id("pwd")).sendKeys(password);
 		driver.findElement(By.id("login")).click();
 	}
 
