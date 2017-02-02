@@ -14,7 +14,6 @@ Scenario: Successful LogOut
 	When  User LogOut from the Application 
 	Then  Message displayed LogOut Successfully 
 	
-	
 	#	Feature: Defines what feature you will be testing in the tests below 
 	#	
 	#	Given: Tells the pre-condition of the test 

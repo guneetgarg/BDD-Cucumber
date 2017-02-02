@@ -1,11 +1,13 @@
 package stepDefinition;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -32,6 +34,16 @@ public class Test_Steps {
 	public void user_enters_UserName_and_Password(String username, String password) throws Throwable {
 		driver.findElement(By.id("log")).sendKeys(username);
 		driver.findElement(By.id("pwd")).sendKeys(password);
+		driver.findElement(By.id("login")).click();
+	}
+
+	@When("^User enters Credentials to LogIn$")
+	public void user_enters_UserName_and_Password(DataTable arg1) {
+		List<List<String>> data = arg1.raw();
+		driver.findElement(By.id("log")).sendKeys(data.get(0).get(0));
+		// This is to get the first data of the set (First Row + Second Column)
+		driver.findElement(By.id("pwd")).sendKeys(data.get(0).get(1));
+
 		driver.findElement(By.id("login")).click();
 	}
 
