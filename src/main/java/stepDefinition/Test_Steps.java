@@ -1,6 +1,7 @@
 package stepDefinition;
 
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -41,8 +42,16 @@ public class Test_Steps {
 	public void user_enters_UserName_and_Password(DataTable arg1) {
 		List<List<String>> data = arg1.raw();
 		driver.findElement(By.id("log")).sendKeys(data.get(0).get(0));
-		// This is to get the first data of the set (First Row + Second Column)
 		driver.findElement(By.id("pwd")).sendKeys(data.get(0).get(1));
+
+		driver.findElement(By.id("login")).click();
+	}
+
+	@When("^User enters Credentials to LogIn1$")
+	public void user_enters_UserName_and_Password1(DataTable arg1) {
+		List<Map<String, String>> data = arg1.asMaps(String.class, String.class);
+		driver.findElement(By.id("log")).sendKeys(data.get(0).get("Username"));
+		driver.findElement(By.id("pwd")).sendKeys(data.get(0).get("Password"));
 
 		driver.findElement(By.id("login")).click();
 	}
@@ -62,4 +71,26 @@ public class Test_Steps {
 		System.out.println("LogOut Successfully");
 	}
 
+	// MAP Data Table Multiple Test Data
+	@When("^User enters Credentials to LogIn2$")
+	public void user_enters_testuser_and_Test(DataTable usercredentials) throws Throwable {
+		for (Map<String, String> data : usercredentials.asMaps(String.class, String.class)) {
+			driver.findElement(By.id("log")).sendKeys(data.get("Username"));
+			driver.findElement(By.id("pwd")).sendKeys(data.get("Password"));
+			driver.findElement(By.id("login")).click();
+		}
+	}
+	
+	//class object
+	@When("^User enters Credentials to LogIn4$")
+	public void user_enters_testuser_and_Test(List<Credentials>  usercredentials) throws Throwable {
+ 
+		//Write the code to handle Data Table
+		for (Credentials credentials : usercredentials) {			
+			driver.findElement(By.id("log")).sendKeys(credentials.getUsername()); 
+		    driver.findElement(By.id("pwd")).sendKeys(credentials.getPassword());
+		    driver.findElement(By.id("login")).click();
+			}		
+	}
+	
 }
