@@ -13,14 +13,14 @@ import cucumber.api.java.en.When;
 public class Test_Steps {
 	public static WebDriver driver;
 
-	@Given("^User is on Home Page$")
-	public void user_is_on_Home_Page() throws Throwable {
+	@Given("^User is on Home Page \"(.*)\"")
+	public void user_is_on_Home_Page(String url) throws Throwable {
 
 		System.setProperty("webdriver.chrome.driver", "Drivers_executable/chromedriver.exe");
 
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get("http://www.store.demoqa.com");
+		driver.get(url);
 	}
 
 	@When("^User Navigate to LogIn Page$")
