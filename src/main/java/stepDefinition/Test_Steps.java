@@ -30,8 +30,8 @@ public class Test_Steps {
 
 	@When("^User enters UserName and Password$")
 	public void user_enters_UserName_and_Password() throws Throwable {
-		driver.findElement(By.id("log")).sendKeys("testuser_1");
-		driver.findElement(By.id("pwd")).sendKeys("Test@123");
+		driver.findElement(By.id("log")).sendKeys("guneetgarg");
+		driver.findElement(By.id("pwd")).sendKeys("");
 		driver.findElement(By.id("login")).click();
 	}
 
@@ -45,7 +45,7 @@ public class Test_Steps {
 		driver.findElement(By.xpath(".//*[@id='account_logout']/a")).click();
 	}
 
-	@Then("^Message displayed Logout Successfully$")
+	@Then("^Message displayed LogOut Successfully$")
 	public void message_displayed_Logout_Successfully() throws Throwable {
 		System.out.println("LogOut Successfully");
 	}
