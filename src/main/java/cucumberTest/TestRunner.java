@@ -6,8 +6,8 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "Feature", glue = { "stepDefinition" }, dryRun = false, monochrome = true, plugin = {
-		"pretty" })
+@CucumberOptions(features = "src/test/features", glue = {
+		"com/google/search" }, dryRun = false, monochrome = true, plugin = { "pretty" })
 
 public class TestRunner {
 
