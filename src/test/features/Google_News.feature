@@ -1,15 +1,14 @@
-Feature: Google Search 
+Feature: Google News 
 
-Scenario: Searching Hell on Google 
+Scenario Outline: Searching News on Google Page
 	Given User opens browser "chrome" 
 	And User navigated to Google Home Page "https://google.com" 
 	When I searched for "Hell" text 
 	Then I Clicked first search 
 	
-Scenario Outline: Multiple Text Search 
 	Given User navigated to Google Home Page "https://google.com" 
 	When I searched for "<text>" text 
-	Then I Clicked first search
+	Then I Clicked first search 
 	Examples: 
 		|text|
 		|Hello|

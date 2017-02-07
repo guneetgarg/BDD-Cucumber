@@ -31,4 +31,9 @@ public class GoogleSearchHell {
 	public void user_enters_UserName_and_Password2() {
 		WA.click(By.name("btnG"));
 	}
+
+	//@AfterClass("@web")
+	public void afterScenario() {
+		// actions
+	}
 }
